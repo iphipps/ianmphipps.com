@@ -7,8 +7,10 @@ IanMPhipps.com
 The /app directory is the uncompressed, unminified version of my portfolio site.  You can find it at <http://angular.ianmphipps.com/>
 
 From this dir, if you
-> npm install
-> grunt build
+
+    npm install
+    grunt build
+
 you will have a /runtime directory that is compressed and minified.  This can be found at my root site <http://ianmphipps.com/>
 
 ###### /backbone
