@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <head>
+    <!--<![endif]-->
+  
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <script src='jquery.js' type='text/javascript'></script>
+    
+  </head>
+  <body>
+    <div class='top'>
+      <div class='main'>
+        <div class="content">
+            <h1>Calculate your 2013 Federal Tax liability</h1>
+            <p>There is no cold percentage for tax, instead it's 10% for the first $8,925.00, 15% until $36,250.00, and keeps going up.  What annoying mathematics!</p>
+            <p>This aims to simplify it for you.</p>
+            <div class="input-wrap salary">
+              <input placeholder="Salary (in dollars per year)" type="text" name="salary"/>
+              
+            </div>
+           
+            
+            <button class="calculate">Calculate</button>
+
+            
+            <p>Tax Liability: $ <span class='liability'> 0 </span> </p>
+            <p>After Tax Yearly Earnings: $ <span class='take-home'> 0 </span> </p>
+            <p>After Tax Weekly Earnings (52wk/yr): $ <span class='per-week'> 0 </span> </p>
+            <p>Resulting Percentage that you <em>actually</em> earn: % <span class='percent'> 0 </span> </p>
+            <h4>Notes:</h4>
+            <ul>
+              <li>The tax rate used for these calculations were found here:
+                <a href="http://www.bankrate.com/finance/taxes/tax-brackets.aspx">http://www.bankrate.com/finance/taxes/tax-brackets.aspx</a>
+                </li>
+
+                <li>The above calculator uses a formula for individuals filing as a single</li>
+                <li>It calculates social security tax assuming your employer pays half of the 12.4%.</li>
+                <li>It also includes the medicare tax of .9% for earners over $200,000/yr but does not include 3.8% net investment tax for those same ballers.
+              </li>
+              <li><em>For Information pusposes only.</em> </br>I am not a tax man.  I just love javascript. Consult a tax professional!</li> 
+              <li>There are other tax calculators out there; I'm not trying to compete, just writing some code.  Good luck to them.  And check them out if you're looking for something more robust.</li> 
+              <li>This calculator has not been tested for 100% accuracy.</li>
+              <p>ian@ianmphipps.com</p>
+
+               
+            </ul>
+
+
+            
+            
+        </div>
+      </div>
+    </div>
+    <div class='contentinfo'></div>
+    <script src='functions.js' type='text/javascript'></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44522370-2', 'ianphipps.com');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

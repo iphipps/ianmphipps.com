@@ -1,0 +1,35 @@
+$orange: #ea6d10;
+$blue: #084c95;
+$purple: #95084c;
+$green: #089551;
+
+
+.col-ian-6{
+	@include clrfx;
+	width: 50%;
+	float: left;
+	height: 0 ;
+	padding-bottom: 50%;
+
+}
+.row-fluid{
+	@include clrfx;
+}
+.circle{
+	background-color: grey;
+	height: 0;
+	padding-bottom: 100%;
+	border-radius: 100%;
+	&.blue{
+		background-color: $blue;
+	}
+	&.orange{
+		background-color: $orange;
+	}
+	&.purple{
+		background-color: $purple;
+	}
+	&.green{
+		background-color: $green;
+	}
+}
