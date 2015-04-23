@@ -1,0 +1,24 @@
+<div ng-controller="workSingular">
+	
+	<div class="detail col-lg-12 col-xs-12" id="Pamela Silva" style="">
+		<div class="close-detail">
+			<p><a href="#/work"><i class="fa fa-chevron-left"></i> Back to All</a></p>
+		</div>
+			<h3>{{workItem.title}}</h3>
+			<p>{{workItem.description}}</p>
+
+			<a ng-if="workItem.link" href="{{workItem.link}}" class="portfoliolink" target="_blank">Visit Site</a>
+
+			<div class="technologies">
+				<h5>Technologies Used</h5>
+				<span ng-if="workItem.technologies.php" class="ian-icon ian-icon-php">php</span>
+				<span ng-if="workItem.technologies.javascripting" class="ian-icon ian-icon-javascripting">javascripting</span>
+				<span ng-if="workItem.technologies.sass" class="ian-icon ian-icon-sass">sass</span><span ng-if="workItem.technologies.html5" class="ian-icon ian-icon-html5">html5</span>
+				<span ng-if="workItem.technologies.css3" class="ian-icon ian-icon-css3">css3</span>
+				<span ng-if="workItem.technologies.wordpress" class="ian-icon ian-icon-wordpress">wordpress</span>
+				<span ng-if="workItem.technologies.drupal" class="ian-icon ian-icon-drupal">drupal</span>
+				<span ng-if="workItem.technologies.responsive" class="ian-icon ian-icon-responsive">responsive</span> 
+				<span ng-if="workItem.technologies.shopify" class="ian-icon ian-icon-shopify">shopify</span>
+			</div>
+		</div>
+</div>

@@ -1,0 +1,60 @@
+.resume-page{
+	color:white;
+	@include clrfx;
+	a{
+		color:white;
+		&:hover{
+			color: #ccc;
+		}
+	}
+	li{
+		color:white;
+		a{
+			color:white;
+		}
+	}
+	h2,h3,h4{
+		color:white;
+		font-family: 'Droid Sans', sans-serif;
+	}
+	section, address{
+		display:block;
+		@include clrfx;
+		
+	}
+
+	address span{
+		display:block;
+		@include font-size(16);
+	}
+
+	section{
+		ul{
+			list-style-type:none;
+			display:block;
+			@include clrfx;
+			padding-left: 0;
+			a{
+				text-decoration: underline;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+
+		}
+		.li-float{
+			li{
+				float:left;
+				line-height:1.8;
+				padding-right:6px;
+			}
+		}
+		
+	}
+
+	h4{
+		display:block;
+		@include clrfx;
+		
+	}
+}

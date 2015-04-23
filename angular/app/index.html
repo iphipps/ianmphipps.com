@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ian Phipps - Web Software Development &amp; Web Design & UX User Experience Professional -  Brooklyn, NY, Web Developers</title>
+  <meta name="copyright" content="Copyright &amp;copy; 2013, Ian Phipps.  All rights reserved.">
+  <meta name="description" content="Ian Phipps is a Miami based professional web developer with a focus on wordpress, drpual, shopify, ruby on rails, angular, backbone, user experience, user interfaces, web design, css3, html5, php5, and javascript.  Serving clients in New York, Miami, Boston, Rhode Island, West Coast and the globe.">
+  <meta name="keywords" content="miami, florida, web design, software development, web development, website design, professional, user experience, freelancer, application, software, web, websites, design">  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- build:css assets/styles/css/style.min.css -->
+  <link rel="stylesheet" href="assets/styles/css/style.css">
+  <!-- endbuild -->
+  <link rel="icon" 
+      type="image/png" 
+      href="assets/img/imp.ico">
+
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="top">
+    
+    <header>
+        <div class="fixed-holder">
+            <div class="return">
+              <div class="container">
+                    <div class="row">
+                        <div class="navigation" >
+                            <nav class="navbar navbar-default" role="navigation">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-ian">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                      </button>
+                                      
+                                       <div class="weather" ng-controller="daylightCtrl">
+                                            <p><span class="ian-weather-icon"></span><span class="time"></span> <span class="hours">There are 00 hours of remaining daylight in Brooklyn</span>
+                                        </div>
+                                    </div>
+                                    <div class="collapse navbar-collapse" id="navigation-ian">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li class="home-menu"><a href="#/"><span>Work</span></a></li>
+                                            <li class="about-menu"><a href="#/about"><span>About</span></a></li>
+                                            <li class="resume-menu"><a href="#/resume"><span>Resume</span></a></li>
+                                        
+                                        </ul>
+                                </div>
+                            </nav>
+ 
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="branding col-xs-12">
+                    <a href="#">
+                    <div class="logo">
+                        
+                        <h1>Ian M Phipps</h1>
+                        <h6>web developer</h6>
+                    </div> 
+                    </a>   
+                </div>
+            </div>
+        </div>
+      </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="main">
+      <div class="container" ng-view></div>
+  </div>
+</div><!--.top-->
+<footer>
+    <p class="copyright">Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &#169; by Ian M. Phipps</p>
+</footer>
+ 
+<div class="fg"></div>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <!-- build:js assets/scripts/js/app.min.js -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/underscore/underscore-min.js"></script>
+  <script src="assets/scripts/work-items.js"></script>
+  <script src="app.js"></script>
+  <script src="components/daylight/daylight-functions.js"></script>
+  <script src="work/work.js"></script>
+  <script src="resume/resume.js"></script>
+  <script src="about/about.js"></script>
+  <script src="components/route-helpers/route-helpers.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>
+  <!-- endbuild -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44522370-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

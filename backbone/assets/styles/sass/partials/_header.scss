@@ -1,0 +1,90 @@
+.return{
+	position: absolute;
+	//overflow: hidden;
+	width: 100%;
+	display: block;
+	-webkit-transition: top 500ms ease .3s;
+	-moz-transition: top 500ms ease .3s;
+	-o-transition: top 500ms ease .3s;
+	transition: top 500ms ease .3s;
+	z-index: 100;
+	top:0;
+}
+
+.navigation{
+	
+	min-width:100%;
+	height:30px;
+	margin:20px 0;
+	
+
+	li{
+		list-style-type:none;
+		display:inline;
+		margin-right:30px;
+		@include font-size(20px);
+		font-weight:600px;
+		
+		
+	}
+
+	a{
+		color:white;
+	}
+	.navbar.navbar-default{
+		background-color: transparent;
+		border-color: transparent;
+	}
+
+
+
+
+
+
+}
+.ian-weather-icon{
+	display:block;
+	background-image: url('../../../pics/assets/cloudwhite.png');
+	background-repeat:no-repeat;
+	width:50px;
+	height:50px;
+	float:left;
+}
+.weather{
+	color:white;
+	position:absolute;
+	top:17px;
+	display:none;
+}
+.branding{
+	padding-top: 80px;
+}
+@media (min-width: 768px) {
+	.weather{
+		display:block;
+	}
+	.branding{
+		padding-top: 140px;
+	}
+}
+
+
+.fixed .return{
+	position:fixed;
+	background-color: white;
+	.branding{
+		display:none;
+	}
+	.navigation{
+		
+		a{
+			color: $grey;
+		}
+	}
+	.ian-weather-icon{
+		background-image: url('../../../pics/assets/cloudgrey.png');
+	}
+	.weather{
+		color:$grey;
+	}
+}

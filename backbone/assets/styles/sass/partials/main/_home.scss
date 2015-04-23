@@ -1,0 +1,91 @@
+
+.preview{
+	margin-bottom:30px;
+	img{
+		display:block;
+		margin: 0 auto;
+		width:100%;
+		cursor: pointer;
+		&:hover{
+			opacity: .8;
+		}
+	}
+}
+.close-detail p{
+	cursor:pointer;
+	&:hover{
+		color: white;
+	}
+}
+.detail{
+	color:white;
+	h3{
+		color:white;
+		text-align:center;
+	}
+	
+}
+.portfoliolink{
+	color: white;
+	margin-top:10px;
+	text-decoration: underline;
+	display:block;
+	font-size:105%;
+	&:hover{
+			color: #ccc;
+			text-decoration: none;
+		}
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.ian-icon{
+	display:block;
+	float:left;
+	width:58px;
+	height:58px;
+	background-image: url('../../../pics/ian_icons.png');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center center;
+	@include ir;
+}
+.technologies{
+	padding:20px 0;
+	margin-top:20px;
+	box-shadow: 0 -2px 0 white;
+
+}
+.ian-icon-haml{
+	background-position: center 0;
+}
+.ian-icon-php{
+	background-position: center -63px;
+}
+.ian-icon-javascripting{
+	background-position: center -125px;
+}
+.ian-icon-sass{
+	background-position: center -188px;
+}
+.ian-icon-html5 {
+	background-position: center -250px;
+}
+.ian-icon-css3{
+	background-position: center -312px;
+}
+.ian-icon-wordpress {
+	background-position: center -375px;
+}
+.ian-icon-drupal{
+	background-position: center -437px;
+}
+.ian-icon-responsive{
+	background-position: center -500px;
+}
+.ian-icon-shopify{
+	background-position: center -563px;
+}

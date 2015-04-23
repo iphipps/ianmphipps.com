@@ -1,0 +1,9 @@
+<div ng-controller="WorkCtrl" class="row-fluid">
+	<div class="work-wrap" ng-repeat="workItem in workItems | orderBy:'order' ">
+		<div class="preview col-xs-12 col-sm-4 col-lg-4">
+			<a href="#/work/{{workItem.id}}">
+				<img ng-src="pics/assets/{{workItem.imgsrc}}" class="img-responsive work-item-image image-large"/>
+			</a>
+		</div>
+	</div>
+</div>
