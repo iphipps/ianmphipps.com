@@ -1,0 +1,22 @@
+{
+  "name": "ianphipps.com",
+  "version": "0.0.5",
+  "description": "A portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iphipps/ianmphipps.com.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Ian Phipps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iphipps/ianmphipps.com/issues"
+  },
+  "homepage": "https://github.com/iphipps/ianmphipps.com#readme"
+}
