@@ -17,7 +17,7 @@ var Root = React.createClass({
         <head>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1"/>
-          <link rel="stylesheet" type="text/css" href="./assets/styles/style.css"/>
+          <link rel="stylesheet" type="text/css" href="./assets/styles/styles.css"/>
           <title>{this.props.title}</title>
         </head>
         <body>

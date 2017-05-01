@@ -9,7 +9,7 @@
     "build": "npm run webpack && npm run compile-sass",
     "dev": "webpack-dev-server --progress --colors",
     "start": "npm run dev",
-    "compile-sass": "node-sass --include-path scss assets/styles/style.scss assets/styles/style.css",
+    "compile-sass": "node-sass --include-path scss assets/styles/styles.scss assets/styles/styles.css",
     "watch-sass": "node-sass --watch assets/styles/ --output assets/styles/"
   },
   "repository": {
