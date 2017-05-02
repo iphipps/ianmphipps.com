@@ -23,6 +23,7 @@ var Root = React.createClass({
         <body>
           <Index {...this.props} />
           <script src='/bundle.js' />
+          <script src='./assets/scripts/scripts.js' type='text/javascript'></script>
         </body>
       </html>
     )

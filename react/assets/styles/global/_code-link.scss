@@ -1,0 +1,83 @@
+$green: #65b44a;
+$blue: #76a3a4;
+$orange: #de8b4e;
+$yellow: #eebe47;
+#terminal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-family: "Courier", monospace;
+	.green {
+		color: $green;
+	}
+	.blue {
+		color: $blue;
+	}
+	.orange {
+		color: $orange;
+	}
+	.yellow {
+		color: $yellow;
+	}
+	.blink {
+		background-color: $yellow;
+		height: 12px;
+		width: 7px;
+		position: relative;
+		display: inline-block;
+		animation: blink 1s infinite;
+	}
+	.terminal-foreground {
+		color: #fff;
+		position: relative;
+		padding-left: 20px;
+		padding-top: 20px;
+		z-index: 4;
+	}
+	.terminal-background {
+		background-color: #1d1233;
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.8;
+		filter: blur(3px);
+	}
+	.resp-1 {
+		white-space: nowrap;
+		display: inline-block;
+  		overflow: hidden;
+		width: 5em;
+  		animation: type 1s steps(60, end); 
+	}
+}
+.delay-1 {
+	opacity: 1;
+
+	animation: fadein 1s;
+	//animation-delay: 1s;
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+	}
+	71% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes blink { 
+	to{opacity: .0}
+}
+@keyframes type{ 
+  from { width: 0; } 
+} 

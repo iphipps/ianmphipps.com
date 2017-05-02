@@ -1,18 +1,18 @@
-ul {
+.iterable {
 	margin: 0;
 	padding: 0;
 	position: relative;
 
 }
-li {
+.iterates {
 	list-style-type: none;
 	opacity: 0;
-	animation: move 24s infinite;
+	animation: move ($length-of-technologies * 1s) infinite;
 	position: absolute;
 }
 
 @for $i from 1 through $length-of-technologies{
-	li:nth-of-type(#{$i}){
+	.iterates:nth-of-type(#{$i + 1}){
 		
 		animation-delay: #{$i}s;
 
@@ -27,7 +27,7 @@ li {
     opacity: 0;
   }
   4% {
-   	display: block;
+   	display: inline-block;
    	opacity: 1;
   }
 

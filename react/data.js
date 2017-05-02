@@ -6,7 +6,6 @@ module.exports = {
   github: 'https://github.com/iphipps',
   linkedin: 'https://www.linkedin.com/in/ian-phipps-9588826/',
   code: [
-  	'code',
   	'react',
   	'redux',
   	'es2015',
@@ -20,21 +19,11 @@ module.exports = {
   	'babel',
   	'node',
   	'mongo',
-  	'mongoose',
   	'php',
   	'python',
   	'java',
   	'html',
-  	'html5',
-  	'seo',
-  	'photoshop',
-  	'illustrator',
-  	'sketch',
-  	'jira',
-  	'agile',
-  	'kanban',
-  	'jenkins',
-  	'docker'
+  	'html5'
 
   ],
   routes: [
