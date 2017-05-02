@@ -23,7 +23,10 @@ module.exports = {
   	'php',
   	'python',
   	'java',
-  	'html5'
+  	'html5',
+    'bash',
+    'sublime',
+    'vim'
 
   ],
   beliefs: [
@@ -35,6 +38,56 @@ module.exports = {
     'in other people',
     'in fitness',
     'most problems are solveable'
+  ],
+  brands: [
+    {
+      name: 'Bluehost',
+      logo: 'bluehost.svg'
+    },
+    {
+      name: 'Domain.com',
+      logo: 'domaincom.svg'
+    },
+    {
+      name: 'Macmillan',
+      logo: 'macmillan.svg'
+    },
+    {
+      name: 'MTV Iggy',
+      logo: 'mtv_logo.svg'
+    },
+    {
+      name: 'Club Monaco',
+      logo: 'cm-logo.svg'
+    },
+    {
+      name: 'GreenLight Fund',
+      logo: 'greenlight-logo-web.svg'
+    },
+    {
+      name: 'Mars Inc',
+      logo: 'mars_inc.svg'
+    },
+    {
+      name: 'Ralph Lauren',
+      logo: 'rl-logo.svg'
+    },
+    {
+      name: 'Constant Contact',
+      logo: 'constant-contact.svg'
+    },
+    {
+      name: 'Juicy Fruit',
+      logo: 'juicy_fruit.svg'
+    },
+    {
+      name: 'Michael Kors',
+      logo: 'mk_black.svg'
+    },
+    {
+      name: 'Wrigley',
+      logo: 'wrigley_logo.svg'
+    },
   ],
   routes: [
     '/'

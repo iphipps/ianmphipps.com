@@ -1,7 +1,10 @@
 var ian = function() {
 	console.log('ian initiates')
 	var body = document.querySelector('body');
-	var codeLink = document.querySelector('.code-link');
+	var codeLink = document.querySelector('.js-code-link');
+	var brandLink = document.querySelector('.js-brand-fake-link');
+	var brands = document.querySelector('.js-brands');
+	var nonBrands = document.querySelector('.js-non-brands');
 	console.log(codeLink);
 	var codeTpl = `<div class="terminal-foreground">
 						<p>
@@ -17,6 +20,7 @@ var ian = function() {
 	this.addEvents = function () {
 		
 		codeLink.addEventListener('click', this.codeClick);
+		brandLink.addEventListener('click', this.brandClick);
 	}
 	this.createTemplate = function() {
 		var div = document.createElement("div");
@@ -48,6 +52,16 @@ var ian = function() {
 
 	}
 	//_this.createTemplate();
+
+	this.brandClick = function(e) {
+		body.className += " branded";
+		body.addEventListener('click', this.backToBasics);
+	}
+	this.backToBasics = function(e) {
+		console.log('back to basics should work')
+		body.classList.remove("branded");
+		body.removeEventListener('click', this.backToBasics);
+	}
 
 }
 

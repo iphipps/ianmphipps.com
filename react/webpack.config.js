@@ -37,6 +37,7 @@ module.exports = {
           loader: 'css-loader?sourceMap!sass-loader?sourceMap',
         })
       }
+
     ]
   },
   stats: {

@@ -1,4 +1,4 @@
-$border: 5vw;
+$border: 3vw;
 body {
 	padding: $border;
 	margin: 0;
@@ -19,4 +19,20 @@ body {
 .main {
 	max-width: 80vw;
 	max-height: 80vh;
+}
+body {
+	.brands {
+		display: none;
+	}
+	.non-brands {
+		display: block;
+	}
+	&.branded {
+		.brands{
+			display: block;
+		}
+		.non-brands {
+			display: none;
+		}
+	}
 }

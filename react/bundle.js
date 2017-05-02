@@ -10227,7 +10227,20 @@ var Root = React.createClass({
       React.createElement(
         'body',
         null,
-        React.createElement(Index, this.props),
+        React.createElement(
+          'div',
+          { className: 'wrap' },
+          React.createElement(Index, this.props)
+        ),
+        React.createElement(
+          'div',
+          { className: 'footer' },
+          React.createElement(
+            'a',
+            { href: 'https://m.me/imphipps' },
+            'Messenger'
+          )
+        ),
         React.createElement('script', { src: '/bundle.js' }),
         React.createElement('script', { src: './assets/scripts/scripts.js', type: 'text/javascript' })
       )
@@ -10269,68 +10282,83 @@ module.exports = function render(locals, callback) {
 var React = __webpack_require__(8);
 
 var Index = React.createClass({
-  displayName: 'Index',
+  displayName: "Index",
 
   render: function () {
     return React.createElement(
-      'div',
-      null,
+      "div",
+      { className: "main" },
       React.createElement(
-        'h2',
+        "h2",
         null,
-        'My name is Ian Phipps. I\'m a ',
+        "My name is Ian Phipps. I'm a ",
         React.createElement(
-          'a',
+          "a",
           { href: this.props.linkedin },
-          'web engineer'
+          "web engineer"
         ),
-        ' living in Brooklyn',
+        " living in Brooklyn",
         React.createElement(
-          'span',
-          { className: 'sr-only' },
-          ', New York'
+          "span",
+          { className: "sr-only" },
+          ", New York"
         ),
-        '.'
+        ". "
       ),
       React.createElement(
-        'h1',
+        "h1",
         null,
-        'I ',
+        "I ",
         React.createElement(
-          'a',
-          { className: 'code-link', href: this.props.github },
-          'code'
+          "a",
+          { className: "code-link", href: this.props.github },
+          "code"
         ),
-        ' with',
+        " with",
         React.createElement(
-          'span',
-          { className: 'iterable' },
+          "span",
+          { className: "iterable" },
           this.props.code.map(function (tech, index) {
             return React.createElement(
-              'span',
-              { className: 'iterates', key: index },
-              ' ',
-              tech
+              "span",
+              { className: "iterates", key: index },
+              " ",
+              tech,
+              React.createElement(
+                "span",
+                { className: "sr-only" },
+                ","
+              )
             );
           })
         )
       ),
       React.createElement(
-        'h3',
+        "h3",
         null,
-        'for big and small brands alike.'
+        "for big and small brands alike."
       ),
       React.createElement(
-        'h4',
+        "h4",
         null,
-        'I believe that all web experiences should be fast, accessible and beautiful.'
-      ),
-      React.createElement(
-        'p',
-        { className: 'sr-only' },
-        'Ian is comfortable with a variety of web technologies including but not limited to:'
-      ),
-      React.createElement('ul', null)
+        "I believe ",
+        React.createElement(
+          "span",
+          { className: "iterable-beliefs" },
+          this.props.beliefs.map(function (belief, index) {
+            return React.createElement(
+              "span",
+              { className: "iterate-belief", key: index },
+              belief,
+              React.createElement(
+                "span",
+                { className: "sr-only" },
+                ","
+              )
+            );
+          })
+        )
+      )
     );
   }
 });
