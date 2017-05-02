@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -376,26 +377,55 @@ template {
   display: none; }
 
 body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600; }
+
+h1, h2, h3, h4 {
+  margin: 0;
   padding: 0;
+  font-size: 30px; }
+
+.main a {
+  color: #4849f6;
+  background-color: #a7f9ba;
+  text-decoration: none;
+  padding-left: 8px;
+  padding-right: 8px; }
+
+.main a:hover {
+  color: #1719f4; }
+
+body {
+  padding: 5vw;
   margin: 0;
   height: 100%;
-  height: 100vh;
+  height: calc(100vh - 10vw);
   width: 100%;
-  width: 100vw;
+  width: 90vw;
+  box-shadow: inset 0 0 0 5vw #a7f9ba; }
+
+.wrap {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: calc(100vh - 10vw);
+  width: 90vw; }
+
+.main {
+  max-width: 80vw;
+  max-height: 80vh; }
 
 .iterable {
   margin: 0;
-  padding: 0;
+  padding-left: 4px;
   position: relative; }
 
 .iterates {
   list-style-type: none;
   opacity: 0;
-  animation: move 18s infinite;
-  position: absolute; }
+  animation: move 18s ease-in infinite;
+  position: absolute;
+  color: #e86932; }
 
 .iterates:nth-of-type(2) {
   animation-delay: 1s; }
@@ -462,6 +492,57 @@ body {
     display: none;
     opacity: 0; } }
 
+h4 {
+  display: flex; }
+
+.iterable-beliefs {
+  margin: 0;
+  flex-grow: 1;
+  position: relative;
+  margin-left: 8px; }
+
+.iterate-belief {
+  position: absolute;
+  list-style-type: none;
+  opacity: 0;
+  color: #e86932;
+  animation: believe 8s ease-in infinite; }
+
+.iterate-belief:nth-of-type(2) {
+  animation-delay: 1s; }
+
+.iterate-belief:nth-of-type(3) {
+  animation-delay: 2s; }
+
+.iterate-belief:nth-of-type(4) {
+  animation-delay: 3s; }
+
+.iterate-belief:nth-of-type(5) {
+  animation-delay: 4s; }
+
+.iterate-belief:nth-of-type(6) {
+  animation-delay: 5s; }
+
+.iterate-belief:nth-of-type(7) {
+  animation-delay: 6s; }
+
+.iterate-belief:nth-of-type(8) {
+  animation-delay: 7s; }
+
+.iterate-belief:nth-of-type(9) {
+  animation-delay: 8s; }
+
+@keyframes believe {
+  0% {
+    display: none;
+    opacity: 0; }
+  6% {
+    display: inline-block;
+    opacity: 1; }
+  12% {
+    display: none;
+    opacity: 0; } }
+
 .period {
   animation: dotdot 3s infinite;
   padding-left: 4px;
@@ -487,7 +568,7 @@ body {
     opacity: 0; } }
 
 .blurred .main {
-  filter: blur(2px); }
+  filter: blur(3px); }
 
 #terminal {
   position: fixed;

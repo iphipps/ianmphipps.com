@@ -6,14 +6,15 @@ module.exports = {
   github: 'https://github.com/iphipps',
   linkedin: 'https://www.linkedin.com/in/ian-phipps-9588826/',
   code: [
+    'javascript',
+    'html',
+    'css',
   	'react',
   	'redux',
   	'es2015',
   	'es2016',
   	'flux',
   	'mobx',
-  	'javascript',
-  	'css',
   	'sass',
   	'webpack',
   	'babel',
@@ -22,9 +23,18 @@ module.exports = {
   	'php',
   	'python',
   	'java',
-  	'html',
   	'html5'
 
+  ],
+  beliefs: [
+    'it should be fast',
+    'it should be accesible',
+    'it should be beautiful',
+    'in myself',
+    'in Science',
+    'in other people',
+    'in fitness',
+    'most problems are solveable'
   ],
   routes: [
     '/'

@@ -38,7 +38,7 @@ var ian = function() {
 		window.setTimeout(function(){
 			holder2.innerHTML = held2;
 		}, 2500);
-		// window.setTimeout(move, 3000);
+		window.setTimeout(move, 3000);
 	}
 	var _this = this;
 	this.codeClick = function(e) {
@@ -47,7 +47,7 @@ var ian = function() {
 		_this.createTemplate();
 
 	}
-	_this.createTemplate();
+	//_this.createTemplate();
 
 }
 

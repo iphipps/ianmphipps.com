@@ -21,7 +21,12 @@ var Root = React.createClass({
           <title>{this.props.title}</title>
         </head>
         <body>
-          <Index {...this.props} />
+          <div className="wrap">
+            <Index {...this.props} />
+          </div>
+          <div className="footer">
+            <a href="https://m.me/imphipps">Messenger</a>
+          </div>
           <script src='/bundle.js' />
           <script src='./assets/scripts/scripts.js' type='text/javascript'></script>
         </body>
