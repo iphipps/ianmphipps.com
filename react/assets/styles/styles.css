@@ -486,6 +486,9 @@ body {
   100% {
     opacity: 0; } }
 
+.blurred .main {
+  filter: blur(2px); }
+
 #terminal {
   position: fixed;
   top: 0;
@@ -495,24 +498,21 @@ body {
   font-family: "Courier", monospace; }
 
 #terminal .green {
-  color: #65b44a; }
+  color: #66af39; }
 
 #terminal .blue {
-  color: #76a3a4; }
+  color: #a0b3e8; }
 
 #terminal .orange {
-  color: #de8b4e; }
+  color: #d87a37; }
 
 #terminal .yellow {
-  color: #eebe47; }
+  color: #e8c347; }
 
 #terminal .blink {
-  background-color: #eebe47;
-  height: 12px;
-  width: 7px;
   position: relative;
   display: inline-block;
-  animation: blink 1s infinite; }
+  animation: blink 1s 3; }
 
 #terminal .terminal-foreground {
   color: #fff;
@@ -529,19 +529,26 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.8;
-  filter: blur(3px); }
+  opacity: 0.8; }
+
+#terminal .resp-holder {
+  display: inline-block; }
 
 #terminal .resp-1 {
   white-space: nowrap;
   display: inline-block;
+  top: 4px;
+  position: relative;
   overflow: hidden;
-  width: 5em;
-  animation: type 1s steps(60, end); }
+  width: 28px;
+  animation: type 500ms steps(3, end); }
 
 .delay-1 {
   opacity: 1;
-  animation: fadein 1s; }
+  display: inline-block;
+  animation: fadein 1000ms;
+  padding-top: 4px;
+  padding-right: 4px; }
 
 @keyframes fadein {
   0% {

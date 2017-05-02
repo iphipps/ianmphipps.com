@@ -1,7 +1,10 @@
-$green: #65b44a;
-$blue: #76a3a4;
-$orange: #de8b4e;
-$yellow: #eebe47;
+$green: #66af39;
+$blue: #a0b3e8;
+$orange: #d87a37;
+$yellow: #e8c347;
+.blurred .main {
+	filter: blur(2px);
+}
 #terminal {
 	position: fixed;
 	top: 0;
@@ -22,12 +25,9 @@ $yellow: #eebe47;
 		color: $yellow;
 	}
 	.blink {
-		background-color: $yellow;
-		height: 12px;
-		width: 7px;
 		position: relative;
 		display: inline-block;
-		animation: blink 1s infinite;
+		animation: blink 1s 3;
 	}
 	.terminal-foreground {
 		color: #fff;
@@ -45,20 +45,27 @@ $yellow: #eebe47;
 		right: 0;
 		bottom: 0;
 		opacity: 0.8;
-		filter: blur(3px);
+	}
+	.resp-holder {
+		display: inline-block;
 	}
 	.resp-1 {
 		white-space: nowrap;
 		display: inline-block;
+		top: 4px;
+		position: relative;
   		overflow: hidden;
-		width: 5em;
-  		animation: type 1s steps(60, end); 
+		width: 28px;
+  		animation: type 500ms steps(3, end); 
+  		//animation-delay: 2s;
 	}
 }
 .delay-1 {
 	opacity: 1;
-
-	animation: fadein 1s;
+	display: inline-block;
+	animation: fadein 1000ms;
+	padding-top: 4px;
+	padding-right: 4px;
 	//animation-delay: 1s;
 }
 @keyframes fadein {
@@ -79,5 +86,6 @@ $yellow: #eebe47;
 	to{opacity: .0}
 }
 @keyframes type{ 
+	
   from { width: 0; } 
 } 

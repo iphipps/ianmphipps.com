@@ -4,7 +4,7 @@ var React = require('react')
 var Index = React.createClass({
   render: function () {
     return (
-      <div>
+      <div className="main">
 
         	
         	<h2>My name is Ian Phipps. I&#39;m a <a href={this.props.linkedin}>web engineer</a> living in Brooklyn<span className="sr-only">, New York</span>.</h2>
