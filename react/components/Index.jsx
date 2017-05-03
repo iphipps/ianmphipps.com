@@ -15,9 +15,9 @@ var Index = React.createClass({
             		})}</span>
             	 </h1>
             	<h3>for big and small <span className="brand-fake-link js-brand-fake-link">brands</span> alike.</h3>
-            	<h4>I believe <span className="iterable-beliefs">
+            	<h4><span className="stagnate">I believe </span><span className="iterable-beliefs">
                 {this.props.beliefs.map(function(belief, index){
-                    return <span className="iterate-belief" key={index}>{belief}<span className='sr-only'>,</span></span>
+                    return <span className="iterate-belief" key={index}><span className="i-believe" ariaHidden={true}>I believe </span>{belief}<span className='sr-only'>, </span></span>
                 })}</span></h4>
             </div>
             <div className="brands js-brands">

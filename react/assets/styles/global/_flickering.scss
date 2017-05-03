@@ -38,20 +38,28 @@ $length-of-technologies: 18;
 }
 $length-of-beliefs: 8;
 h4 {
-	display: flex;
+	position: relative;
 
 }
+.stagnate {
+	position: absolute;
+	top: 0;
+	display: block;
+}
 .iterable-beliefs {
-	margin: 0;
-	flex-grow: 1;
-	position: relative;
-	margin-left: 8px;
+
 
 }
 .iterate-belief {
-	position: absolute;
+	.i-believe {
+		visiblibilty: hidden;
+		opacity: 0;
+	}
 	list-style-type: none;
+	display: block;
 	opacity: 0;
+	height: 0;
+
 	color: $type-orange;
 	animation: believe ($length-of-beliefs * 1s) ease-in infinite;
 
@@ -70,16 +78,19 @@ h4 {
 
 @keyframes believe {
   0% {
-    display: none;
+    height: 0;
+
     opacity: 0;
   }
-  6% {
-   	display: inline-block;
+  7% {
+   	height: auto;
+
    	opacity: 1;
   }
 
-  12% {
-    display: none;
+  14% {
+    height: 0;
+
     opacity: 0;
   }
 }

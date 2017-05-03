@@ -18,7 +18,7 @@ body {
 }
 .main {
 	max-width: 80vw;
-	max-height: 80vh;
+	height: 80vh;
 	overflow-y: scroll;
 }
 .footer {
@@ -45,6 +45,7 @@ body {
 		
 	}
 	&.branded {
+		box-shadow: inset 0 0 0 $border $lime;
 		.brands{
 			height: auto;
 			opacity: 1;
