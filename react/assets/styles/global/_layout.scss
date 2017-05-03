@@ -2,12 +2,13 @@ $border: 3vw;
 body {
 	padding: 0;
 	margin: 0;
-
-	
+	display: flex;
+	flex-direction: column;
 	background-color: $type-green;
 }
 .wrap {
 	display: flex;
+	flex-grow: 1;
 	margin: $border;
 	justify-content: center;
 	align-items: center;
@@ -16,15 +17,31 @@ body {
 	background-color: #fff;
 }
 .main {
-
-
+	padding-top: $border;
+	padding-bottom: $border;
 }
 .footer {
 	position: absolute;
-	bottom: 6px;
-	right: 6px;
+	bottom: $border * 1.5;
+	right: $border * 2;
 	svg {
-		max-height: 10px;
+		// material design guidelines for touch devices
+		opacity: 0.2;
+		width: 44px;
+		height: 44px;
+				
+	}
+
+
+	@include breakpoint(1200px) {
+		
+
+		svg {
+		
+		
+			height: $border;
+			width: $border;
+		}
 	}
 }
 body {

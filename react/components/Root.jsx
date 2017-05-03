@@ -26,7 +26,7 @@ var Root = React.createClass({
           </div>
           <div className="footer">
             <a href="https://m.me/imphipps">
-              <svg height="20px" width="20px" version="1.1" viewBox="0 0 224 226">
+              <svg height="100px" width="100px" version="1.1" viewBox="0 0 224 226">
                <defs>
                 <linearGradient id="a" y1="6.76%" x2="50%" x1="50%" y2="95.6%">
                  <stop stop-color="#00C6FF" offset="0"/>

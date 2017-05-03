@@ -12,6 +12,22 @@ h1, h2, h3, h4 {
 		font-size: 45px;
 	}
 }
+.linky-1 {
+	padding-left: 3px;
+	padding-right: 3px;
+	@include breakpoint($desktop) {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
+.linky-2 {
+	padding-left: 3px;
+	padding-right: 3px;
+	@include breakpoint($desktop) {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
 .brand-fake-link, .fake-hover {
 	cursor: default;
 }
@@ -24,12 +40,12 @@ h1, h2, h3, h4 {
 	opacity: 0.6;
 }
 .main a, .brand-fake-link {
-	color: $type-blue;
+	color: $black;
 	background-color: $type-green;
 	text-decoration: none;
 	padding-left: 8px;
 	padding-right: 8px;
 	&:hover {
-		color: darken($type-blue, 10%);
+		color: lighten($black, 10%);
 	}
 }

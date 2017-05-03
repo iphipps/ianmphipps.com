@@ -30,15 +30,15 @@ module.exports = {
 
   ],
   beliefs: [
-    'the Internet should be fast',
-    'it should be beautiful',
-    'that most problems can be solved',
-    'the Internet should be accessible',
-    'in myself',
-    'in science',
-    'in other people',
-    'in fitness',
-    'that we are NOT in a simulation'
+    'the Internet should be fast.',
+    'it should be beautiful.',
+    'that most problems can be solved.',
+    'the Internet should be accessible.',
+    'in myself.',
+    'in science.',
+    'in other people.',
+    'in fitness.',
+    'that we are NOT in a simulation.'
     
   ],
   brands: [
