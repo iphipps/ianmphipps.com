@@ -10200,6 +10200,13 @@ var Router = __webpack_require__(185);
 var RouteHandler = Router.RouteHandler;
 var Index = __webpack_require__(91);
 
+var google = `(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-44522370-1', 'auto');
+            ga('send', 'pageview');`;
+
 var Root = React.createClass({
   displayName: 'Root',
 
@@ -10221,8 +10228,12 @@ var Root = React.createClass({
         React.createElement(
           'title',
           null,
-          this.props.title
-        )
+          'Ian Phipps Portfolio Site: Web Engineer/Developmer & based in Brooklyn, New York'
+        ),
+        React.createElement('meta', { name: 'copyright', content: 'Copyright &copy; 2017, Ian Phipps.  All rights reserved.' }),
+        React.createElement('meta', { name: 'description', content: 'Ian Phipps is a Brooklyn based professional web engineer with a focus on web and isomorphic applications written in javascript / node, css / sass and html. He believes that the web experience should tell a story.  It should be fast and accessible.  Lastly, it ought to be beautiful.  As a freelancer, Ian is available for new projects / contracts.' }),
+        React.createElement('meta', { name: 'keywords', content: 'brooklyn, new york, web design, software development, web development, web engineering, web application, single page, isomorphic, react, javascript.' }),
+        React.createElement('link', { rel: 'icon', type: 'image/png', href: 'assets/images/imp.ico' })
       ),
       React.createElement(
         'body',
@@ -10232,32 +10243,8 @@ var Root = React.createClass({
           { className: 'wrap' },
           React.createElement(Index, this.props)
         ),
-        React.createElement(
-          'div',
-          { className: 'footer' },
-          React.createElement(
-            'a',
-            { href: 'https://m.me/imphipps' },
-            React.createElement(
-              'svg',
-              { height: '20px', width: '20px', version: '1.1', viewBox: '0 0 224 226' },
-              React.createElement(
-                'defs',
-                null,
-                React.createElement(
-                  'linearGradient',
-                  { id: 'a', y1: '6.76%', x2: '50%', x1: '50%', y2: '95.6%' },
-                  React.createElement('stop', { 'stop-color': '#00C6FF', offset: '0' }),
-                  React.createElement('stop', { 'stop-color': '#0068FF', offset: '1' })
-                )
-              ),
-              React.createElement('path', { fill: 'url(#a)', d: 'm41.255 185.52v40.2l37.589-21.37c10.478 3.02 21.616 4.65 33.156 4.65 61.86 0 112-46.79 112-104.5 0-57.714-50.14-104.5-112-104.5-61.856 0-112 46.786-112 104.5 0 32.68 16.078 61.86 41.255 81.02z' }),
-              React.createElement('path', { fill: '#fff', d: 'm100.04 75.878l-60.401 63.952 54.97-30.16 28.721 30.16 60.06-63.952-54.36 29.632-28.99-29.632z' })
-            )
-          )
-        ),
-        React.createElement('script', { src: '/bundle.js' }),
-        React.createElement('script', { src: './assets/scripts/scripts.js', type: 'text/javascript' })
+        React.createElement('script', { src: './assets/scripts/scripts.js', type: 'text/javascript' }),
+        React.createElement('script', { dangerouslySetInnerHTML: { __html: google } })
       )
     );
   }
@@ -10309,11 +10296,23 @@ var Index = React.createClass({
                 React.createElement(
                     "h2",
                     null,
-                    "My name is Ian Phipps. I'm a ",
+                    "My name is Ian Phipps. ",
+                    React.createElement("br", null),
+                    "I'm a ",
                     React.createElement(
                         "a",
                         { href: this.props.linkedin },
-                        "web engineer"
+                        React.createElement(
+                            "span",
+                            { className: "linky-1" },
+                            "web"
+                        ),
+                        "\xA0",
+                        React.createElement(
+                            "span",
+                            { className: "link-2" },
+                            "engineer"
+                        )
                     ),
                     " living in Brooklyn",
                     React.createElement(
@@ -10344,6 +10343,11 @@ var Index = React.createClass({
                                 tech,
                                 React.createElement(
                                     "span",
+                                    { ariaHidden: true },
+                                    "."
+                                ),
+                                React.createElement(
+                                    "span",
                                     { className: "sr-only" },
                                     ","
                                 )
@@ -10354,44 +10358,21 @@ var Index = React.createClass({
                 React.createElement(
                     "h3",
                     null,
-                    "for big and small ",
+                    "And I've worked for some great ",
                     React.createElement(
                         "span",
                         { className: "brand-fake-link js-brand-fake-link" },
                         "clients"
                     ),
-                    " alike."
+                    "."
                 ),
+                React.createElement("br", null),
                 React.createElement(
-                    "h4",
-                    null,
-                    React.createElement(
-                        "span",
-                        { className: "stagnate" },
-                        "I believe "
-                    ),
-                    React.createElement(
-                        "span",
-                        { className: "iterable-beliefs" },
-                        this.props.beliefs.map(function (belief, index) {
-                            return React.createElement(
-                                "span",
-                                { className: "iterate-belief", key: index },
-                                React.createElement(
-                                    "span",
-                                    { className: "i-believe", ariaHidden: true },
-                                    "I believe "
-                                ),
-                                belief,
-                                React.createElement(
-                                    "span",
-                                    { className: "sr-only" },
-                                    ", "
-                                )
-                            );
-                        })
-                    )
-                )
+                    "a",
+                    { className: "cta-link", href: "https://m.me/imphipps" },
+                    "Message me"
+                ),
+                " or email me at ian@ianmphipps.com"
             ),
             React.createElement(
                 "div",
