@@ -14,11 +14,8 @@ var Index = React.createClass({
             		return <span className="iterates" key={index}> {tech}<span ariaHidden={true}>.</span><span className='sr-only'>,</span></span>
             		})}</span>
             	 </h1>
-            	<h3>for big and small <span className="brand-fake-link js-brand-fake-link">clients</span> alike.</h3>
-            	<h4><span className="stagnate">I believe </span><span className="iterable-beliefs">
-                {this.props.beliefs.map(function(belief, index){
-                    return <span className="iterate-belief" key={index}><span className="i-believe" ariaHidden={true}>I believe </span>{belief}<span className='sr-only'>, </span></span>
-                })}</span></h4>
+            	<h3>And I&#39;ve worked for some great <span className="brand-fake-link js-brand-fake-link">clients</span>.</h3>
+            	<br/><a className="cta-link" href="https://m.me/imphipps">Message me</a> or email me at ian@ianmphipps.com
             </div>
             <div className="brands js-brands">
                 <div className='fake-hover'>
