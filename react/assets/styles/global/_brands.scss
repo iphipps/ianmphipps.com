@@ -18,13 +18,23 @@
 		align-items: center;
 		justify-content: center;
 		flex-shrink: 0;
-
-	}
-	img {
+		img {
 		
-		max-width: 80%;
-		display: block;
+			max-width: 80%;
+			display: block;
+		}
+		&.mtv {
+			img {
+				max-width: 50%;
+			}
+		}
+		&.ipage {
+			img {
+				max-width: 50%;
+			}
+		}
 	}
+	
 }
 
 @include breakpoint($desktop) {

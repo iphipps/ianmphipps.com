@@ -383,7 +383,8 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
-  font-size: 30px; }
+  font-size: 30px;
+  line-height: 1.6; }
 
 .brand-fake-link, .fake-hover {
   cursor: default; }
@@ -419,12 +420,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 6vw);
-  width: 94vw; }
+  height: calc(100vh - 12vw);
+  width: 88vw;
+  padding: 3vw; }
 
 .main {
-  max-width: 80vw;
-  height: 80vh;
+  max-width: 88vw;
+  max-height: calc(100vh - 12vw);
   overflow-y: scroll; }
 
 .footer {
@@ -470,82 +472,96 @@ body.branded .non-brands ul {
 .iterates {
   list-style-type: none;
   opacity: 0;
-  animation: move 18s ease-in infinite;
+  animation: move 31500ms ease-in infinite;
   position: absolute;
   color: #e86932; }
 
 .iterates:nth-of-type(2) {
-  animation-delay: 1s; }
+  animation-delay: 1500ms; }
 
 .iterates:nth-of-type(3) {
-  animation-delay: 2s; }
+  animation-delay: 3000ms; }
 
 .iterates:nth-of-type(4) {
-  animation-delay: 3s; }
+  animation-delay: 4500ms; }
 
 .iterates:nth-of-type(5) {
-  animation-delay: 4s; }
+  animation-delay: 6000ms; }
 
 .iterates:nth-of-type(6) {
-  animation-delay: 5s; }
+  animation-delay: 7500ms; }
 
 .iterates:nth-of-type(7) {
-  animation-delay: 6s; }
+  animation-delay: 9000ms; }
 
 .iterates:nth-of-type(8) {
-  animation-delay: 7s; }
+  animation-delay: 10500ms; }
 
 .iterates:nth-of-type(9) {
-  animation-delay: 8s; }
+  animation-delay: 12000ms; }
 
 .iterates:nth-of-type(10) {
-  animation-delay: 9s; }
+  animation-delay: 13500ms; }
 
 .iterates:nth-of-type(11) {
-  animation-delay: 10s; }
+  animation-delay: 15000ms; }
 
 .iterates:nth-of-type(12) {
-  animation-delay: 11s; }
+  animation-delay: 16500ms; }
 
 .iterates:nth-of-type(13) {
-  animation-delay: 12s; }
+  animation-delay: 18000ms; }
 
 .iterates:nth-of-type(14) {
-  animation-delay: 13s; }
+  animation-delay: 19500ms; }
 
 .iterates:nth-of-type(15) {
-  animation-delay: 14s; }
+  animation-delay: 21000ms; }
 
 .iterates:nth-of-type(16) {
-  animation-delay: 15s; }
+  animation-delay: 22500ms; }
 
 .iterates:nth-of-type(17) {
-  animation-delay: 16s; }
+  animation-delay: 24000ms; }
 
 .iterates:nth-of-type(18) {
-  animation-delay: 17s; }
+  animation-delay: 25500ms; }
 
 .iterates:nth-of-type(19) {
-  animation-delay: 18s; }
+  animation-delay: 27000ms; }
+
+.iterates:nth-of-type(20) {
+  animation-delay: 28500ms; }
+
+.iterates:nth-of-type(21) {
+  animation-delay: 30000ms; }
+
+.iterates:nth-of-type(22) {
+  animation-delay: 31500ms; }
 
 @keyframes move {
   0% {
     display: none;
     opacity: 0; }
-  4% {
+  2.38095% {
     display: inline-block;
     opacity: 1; }
-  8% {
+  4.7619% {
     display: none;
     opacity: 0; } }
 
 h4 {
-  position: relative; }
+  position: relative;
+  min-height: 150px; }
 
 .stagnate {
   position: absolute;
   top: 0;
   display: block; }
+
+.iterable-beliefs {
+  position: absolute;
+  height: 150px; }
 
 .iterate-belief {
   list-style-type: none;
@@ -553,44 +569,47 @@ h4 {
   opacity: 0;
   height: 0;
   color: #e86932;
-  animation: believe 8s ease-in infinite; }
+  animation: believe 19800ms ease-in infinite; }
 
 .iterate-belief .i-believe {
   visiblibilty: hidden;
   opacity: 0; }
 
 .iterate-belief:nth-of-type(2) {
-  animation-delay: 1s; }
+  animation-delay: 2200ms; }
 
 .iterate-belief:nth-of-type(3) {
-  animation-delay: 2s; }
+  animation-delay: 4400ms; }
 
 .iterate-belief:nth-of-type(4) {
-  animation-delay: 3s; }
+  animation-delay: 6600ms; }
 
 .iterate-belief:nth-of-type(5) {
-  animation-delay: 4s; }
+  animation-delay: 8800ms; }
 
 .iterate-belief:nth-of-type(6) {
-  animation-delay: 5s; }
+  animation-delay: 11000ms; }
 
 .iterate-belief:nth-of-type(7) {
-  animation-delay: 6s; }
+  animation-delay: 13200ms; }
 
 .iterate-belief:nth-of-type(8) {
-  animation-delay: 7s; }
+  animation-delay: 15400ms; }
 
 .iterate-belief:nth-of-type(9) {
-  animation-delay: 8s; }
+  animation-delay: 17600ms; }
+
+.iterate-belief:nth-of-type(10) {
+  animation-delay: 19800ms; }
 
 @keyframes believe {
   0% {
     height: 0;
     opacity: 0; }
-  7% {
+  5.55556% {
     height: auto;
     opacity: 1; }
-  14% {
+  11.11111% {
     height: 0;
     opacity: 0; } }
 
@@ -722,9 +741,15 @@ h4 {
   justify-content: center;
   flex-shrink: 0; }
 
-.brands img {
+.brands li img {
   max-width: 80%;
   display: block; }
+
+.brands li.mtv img {
+  max-width: 50%; }
+
+.brands li.ipage img {
+  max-width: 50%; }
 
 @media (min-width: 768px) {
   .brands li {

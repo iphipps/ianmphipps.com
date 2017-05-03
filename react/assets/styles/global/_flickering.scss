@@ -1,4 +1,6 @@
-$length-of-technologies: 18;
+$length-of-technologies: 21;
+$time-to-read: 1500ms;
+$time-to-beliefs: 2200ms;
 .iterable {
 	margin: 0;
 	padding-left: 4px;
@@ -8,7 +10,7 @@ $length-of-technologies: 18;
 .iterates {
 	list-style-type: none;
 	opacity: 0;
-	animation: move ($length-of-technologies * 1s) ease-in infinite;
+	animation: move ($length-of-technologies * $time-to-read) ease-in infinite;
 	position: absolute;
 	color: $type-orange;
 }
@@ -16,7 +18,7 @@ $length-of-technologies: 18;
 @for $i from 1 through $length-of-technologies{
 	.iterates:nth-of-type(#{$i + 1}){
 		
-		animation-delay: #{$i}s;
+		animation-delay: #{$i * $time-to-read};
 
 	}
 
@@ -26,19 +28,20 @@ $length-of-technologies: 18;
     display: none;
     opacity: 0;
   }
-  4% {
+  #{(100% / $length-of-technologies) / 2} {
    	display: inline-block;
    	opacity: 1;
   }
 
-  8% {
+  #{(100% / $length-of-technologies)} {
     display: none;
     opacity: 0;
   }
 }
-$length-of-beliefs: 8;
+$length-of-beliefs: 9;
 h4 {
 	position: relative;
+	min-height: 150px;
 
 }
 .stagnate {
@@ -47,8 +50,8 @@ h4 {
 	display: block;
 }
 .iterable-beliefs {
-
-
+	position: absolute;
+	height: 150px;
 }
 .iterate-belief {
 	.i-believe {
@@ -61,14 +64,14 @@ h4 {
 	height: 0;
 
 	color: $type-orange;
-	animation: believe ($length-of-beliefs * 1s) ease-in infinite;
+	animation: believe ($length-of-beliefs * $time-to-beliefs) ease-in infinite;
 
 }
 
 @for $i from 1 through $length-of-beliefs{
 	.iterate-belief:nth-of-type(#{$i + 1}){
 		
-		animation-delay: #{$i}s;
+		animation-delay: #{$i * $time-to-beliefs};
 
 	}
 
@@ -82,13 +85,13 @@ h4 {
 
     opacity: 0;
   }
-  7% {
+  #{(100% / $length-of-beliefs) / 2} {
    	height: auto;
 
    	opacity: 1;
   }
 
-  14% {
+  #{100% / $length-of-beliefs} {
     height: 0;
 
     opacity: 0;

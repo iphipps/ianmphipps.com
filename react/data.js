@@ -30,62 +30,81 @@ module.exports = {
 
   ],
   beliefs: [
-    'it should be fast',
-    'it should be accesible',
+    'the Internet should be fast',
     'it should be beautiful',
+    'that most problems can be solved',
+    'the Internet should be accessible',
     'in myself',
-    'in Science',
+    'in science',
     'in other people',
     'in fitness',
-    'most problems are solveable'
+    'that we are NOT in a simulation'
+    
   ],
   brands: [
     {
-      name: 'Bluehost',
-      logo: 'bluehost.svg'
-    },
-    {
       name: 'Domain.com',
+      classnames: 'domaincom',
       logo: 'domaincom.svg'
     },
     {
       name: 'Macmillan',
+      classnames: 'macmillan',
       logo: 'macmillan.svg'
     },
     {
       name: 'MTV Iggy',
+      classnames: 'mtv',
       logo: 'mtv_logo.svg'
     },
     {
       name: 'Club Monaco',
+      classnames: 'cm',
       logo: 'cm-logo.svg'
     },
     {
       name: 'GreenLight Fund',
+      classnames: 'gl',
       logo: 'greenlight-logo-web.svg'
     },
     {
+      name: 'Ipage',
+      classnames: 'ipage',
+      logo: 'ipage.svg'
+    },
+    {
+      name: 'WH Freeman',
+      classnames: 'whf',
+      logo: 'WHFlogo.jpg'
+    },
+    {
+      name: 'Vistaprint',
+      classnames: 'vp',
+      logo: 'vistaprint.png'
+    },
+    {
       name: 'Mars Inc',
+      classnames: 'mars',
       logo: 'mars_inc.svg'
     },
     {
       name: 'Ralph Lauren',
+      classnames: 'rl',
       logo: 'rl-logo.svg'
     },
     {
       name: 'Constant Contact',
+      classnames: 'cc',
       logo: 'constant-contact.svg'
     },
     {
-      name: 'Juicy Fruit',
-      logo: 'juicy_fruit.svg'
-    },
-    {
       name: 'Michael Kors',
+      classnames: 'mk',
       logo: 'mk_black.svg'
     },
     {
       name: 'Wrigley',
+      classnames: 'wr',
       logo: 'wrigley_logo.svg'
     },
   ],
