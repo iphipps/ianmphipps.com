@@ -10238,7 +10238,22 @@ var Root = React.createClass({
           React.createElement(
             'a',
             { href: 'https://m.me/imphipps' },
-            'Messenger'
+            React.createElement(
+              'svg',
+              { height: '20px', width: '20px', version: '1.1', viewBox: '0 0 224 226' },
+              React.createElement(
+                'defs',
+                null,
+                React.createElement(
+                  'linearGradient',
+                  { id: 'a', y1: '6.76%', x2: '50%', x1: '50%', y2: '95.6%' },
+                  React.createElement('stop', { 'stop-color': '#00C6FF', offset: '0' }),
+                  React.createElement('stop', { 'stop-color': '#0068FF', offset: '1' })
+                )
+              ),
+              React.createElement('path', { fill: 'url(#a)', d: 'm41.255 185.52v40.2l37.589-21.37c10.478 3.02 21.616 4.65 33.156 4.65 61.86 0 112-46.79 112-104.5 0-57.714-50.14-104.5-112-104.5-61.856 0-112 46.786-112 104.5 0 32.68 16.078 61.86 41.255 81.02z' }),
+              React.createElement('path', { fill: '#fff', d: 'm100.04 75.878l-60.401 63.952 54.97-30.16 28.721 30.16 60.06-63.952-54.36 29.632-28.99-29.632z' })
+            )
           )
         ),
         React.createElement('script', { src: '/bundle.js' }),
@@ -10282,85 +10297,134 @@ module.exports = function render(locals, callback) {
 var React = __webpack_require__(8);
 
 var Index = React.createClass({
-  displayName: "Index",
+    displayName: "Index",
 
-  render: function () {
-    return React.createElement(
-      "div",
-      { className: "main" },
-      React.createElement(
-        "h2",
-        null,
-        "My name is Ian Phipps. I'm a ",
-        React.createElement(
-          "a",
-          { href: this.props.linkedin },
-          "web engineer"
-        ),
-        " living in Brooklyn",
-        React.createElement(
-          "span",
-          { className: "sr-only" },
-          ", New York"
-        ),
-        ". "
-      ),
-      React.createElement(
-        "h1",
-        null,
-        "I ",
-        React.createElement(
-          "a",
-          { className: "code-link", href: this.props.github },
-          "code"
-        ),
-        " with",
-        React.createElement(
-          "span",
-          { className: "iterable" },
-          this.props.code.map(function (tech, index) {
-            return React.createElement(
-              "span",
-              { className: "iterates", key: index },
-              " ",
-              tech,
-              React.createElement(
-                "span",
-                { className: "sr-only" },
-                ","
-              )
-            );
-          })
-        )
-      ),
-      React.createElement(
-        "h3",
-        null,
-        "for big and small brands alike."
-      ),
-      React.createElement(
-        "h4",
-        null,
-        "I believe ",
-        React.createElement(
-          "span",
-          { className: "iterable-beliefs" },
-          this.props.beliefs.map(function (belief, index) {
-            return React.createElement(
-              "span",
-              { className: "iterate-belief", key: index },
-              belief,
-              React.createElement(
-                "span",
-                { className: "sr-only" },
-                ","
-              )
-            );
-          })
-        )
-      )
-    );
-  }
+    render: function () {
+        return React.createElement(
+            "div",
+            { className: "main" },
+            React.createElement(
+                "div",
+                { className: "non-brands js-non-brands" },
+                React.createElement(
+                    "h2",
+                    null,
+                    "My name is Ian Phipps. I'm a ",
+                    React.createElement(
+                        "a",
+                        { href: this.props.linkedin },
+                        "web engineer"
+                    ),
+                    " living in Brooklyn",
+                    React.createElement(
+                        "span",
+                        { className: "sr-only" },
+                        ", New York"
+                    ),
+                    ". "
+                ),
+                React.createElement(
+                    "h1",
+                    null,
+                    "I ",
+                    React.createElement(
+                        "a",
+                        { className: "code-link js-code-link", href: this.props.github },
+                        "code"
+                    ),
+                    " with",
+                    React.createElement(
+                        "span",
+                        { className: "iterable" },
+                        this.props.code.map(function (tech, index) {
+                            return React.createElement(
+                                "span",
+                                { className: "iterates", key: index },
+                                " ",
+                                tech,
+                                React.createElement(
+                                    "span",
+                                    { className: "sr-only" },
+                                    ","
+                                )
+                            );
+                        })
+                    )
+                ),
+                React.createElement(
+                    "h3",
+                    null,
+                    "for big and small ",
+                    React.createElement(
+                        "span",
+                        { className: "brand-fake-link js-brand-fake-link" },
+                        "clients"
+                    ),
+                    " alike."
+                ),
+                React.createElement(
+                    "h4",
+                    null,
+                    React.createElement(
+                        "span",
+                        { className: "stagnate" },
+                        "I believe "
+                    ),
+                    React.createElement(
+                        "span",
+                        { className: "iterable-beliefs" },
+                        this.props.beliefs.map(function (belief, index) {
+                            return React.createElement(
+                                "span",
+                                { className: "iterate-belief", key: index },
+                                React.createElement(
+                                    "span",
+                                    { className: "i-believe", ariaHidden: true },
+                                    "I believe "
+                                ),
+                                belief,
+                                React.createElement(
+                                    "span",
+                                    { className: "sr-only" },
+                                    ", "
+                                )
+                            );
+                        })
+                    )
+                )
+            ),
+            React.createElement(
+                "div",
+                { className: "brands js-brands" },
+                React.createElement(
+                    "div",
+                    { className: "fake-hover" },
+                    React.createElement(
+                        "svg",
+                        { width: "12", height: "12", viewBox: "0 0 1792 1792" },
+                        React.createElement("path", { d: "M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z" })
+                    )
+                ),
+                React.createElement(
+                    "ul",
+                    null,
+                    this.props.brands.map(function (brand, index) {
+                        return React.createElement(
+                            "li",
+                            { key: index, className: brand.classnames },
+                            React.createElement(
+                                "span",
+                                { className: "sr-only" },
+                                brand.name
+                            ),
+                            " ",
+                            React.createElement("img", { src: "./assets/images/" + brand.logo })
+                        );
+                    })
+                )
+            )
+        );
+    }
 });
 
 module.exports = Index;
