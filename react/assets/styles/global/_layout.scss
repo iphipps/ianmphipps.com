@@ -19,20 +19,43 @@ body {
 .main {
 	max-width: 80vw;
 	max-height: 80vh;
+	overflow-y: scroll;
+}
+.footer {
+	position: absolute;
+	bottom: 6px;
+	right: 6px;
+	svg {
+		max-height: 10px;
+	}
 }
 body {
 	.brands {
-		display: none;
+		height: 0;
+		overflow: hidden;
+		transition: opacity 1s ease-out;
+		opacity: 0;
 	}
 	.non-brands {
-		display: block;
+		height: auto;
+		ul {
+			transition: opacity 1s ease-out;
+			opacity: 1;
+		}
+		
 	}
 	&.branded {
 		.brands{
-			display: block;
+			height: auto;
+			opacity: 1;
 		}
 		.non-brands {
-			display: none;
+
+			height: 0;
+			overflow: hidden;
+			ul {
+				opacity: 0;
+			}
 		}
 	}
 }

@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --progress --colors",
     "start": "npm run dev",
     "compile-sass": "node-sass --include-path scss assets/styles/styles.scss assets/styles/styles.css",
-    "watch-sass": "node-sass --watch assets/styles/ --output assets/styles/"
+    "watch-sass": "node-sass --watch --source-map true assets/styles/ --output assets/styles/"
   },
   "repository": {
     "type": "git",

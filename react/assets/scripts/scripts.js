@@ -6,6 +6,7 @@ var ian = function() {
 	var brands = document.querySelector('.js-brands');
 	var nonBrands = document.querySelector('.js-non-brands');
 	console.log(codeLink);
+	var _this = this;
 	var codeTpl = `<div class="terminal-foreground">
 						<p>
 							<span class="term"><span class="blue">iphipps</span>@<span class="green">devbox:</span><span class="orange">portfoliosite</span>$</span> 
@@ -44,7 +45,7 @@ var ian = function() {
 		}, 2500);
 		window.setTimeout(move, 3000);
 	}
-	var _this = this;
+	
 	this.codeClick = function(e) {
 		e.preventDefault();
 		console.log(e);
@@ -52,15 +53,26 @@ var ian = function() {
 
 	}
 	//_this.createTemplate();
-
+	var backtoBasics = -1;
 	this.brandClick = function(e) {
 		body.className += " branded";
-		body.addEventListener('click', this.backToBasics);
+		backtoBasics = -1;
+		body.addEventListener('click', _this.backToBasics);
 	}
+
 	this.backToBasics = function(e) {
-		console.log('back to basics should work')
-		body.classList.remove("branded");
-		body.removeEventListener('click', this.backToBasics);
+		++ backtoBasics;
+		if (backtoBasics === 0) {
+			// do nothing
+		} else {
+			// make back to basics more and add the event listener
+			
+			body.classList.remove("branded");
+			body.removeEventListener('click', _this.backToBasics);
+		}
+		console.log('back to basics should work', backtoBasics)
+		
+		// body.removeEventListener('click', this.backToBasics);
 	}
 
 }
