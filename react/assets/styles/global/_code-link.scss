@@ -51,13 +51,20 @@ $yellow: #e8c347;
 	}
 	.resp-1 {
 		white-space: nowrap;
-		display: inline-block;
-		top: 4px;
+		display: inline-block; 
 		position: relative;
   		overflow: hidden;
 		width: 28px;
   		animation: type 500ms steps(3, end); 
   		//animation-delay: 2s;
+  		@include breakpoint($desktop) {
+  			top: 4px;
+  		}
+	}
+	p {
+		span {
+			display: inline-block;
+		}
 	}
 }
 .delay-1 {

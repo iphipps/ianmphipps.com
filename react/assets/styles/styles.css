@@ -383,33 +383,15 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
-  font-size: 30px;
-  line-height: 1.6; }
-
-@media (min-width: 768px) {
-  h1, h2, h3, h4 {
-    font-size: 45px; } }
+  font-size: 24px;
+  line-height: 1.4; }
+  @media (min-width: 768px) {
+    h1, h2, h3, h4 {
+      font-size: 45px;
+      line-height: 1.6; } }
 
 h4 {
   margin-top: 60px; }
-
-.linky-1 {
-  padding-left: 3px;
-  padding-right: 3px; }
-
-@media (min-width: 768px) {
-  .linky-1 {
-    padding-left: 6px;
-    padding-right: 6px; } }
-
-.linky-2 {
-  padding-left: 3px;
-  padding-right: 3px; }
-
-@media (min-width: 768px) {
-  .linky-2 {
-    padding-left: 6px;
-    padding-right: 6px; } }
 
 .brand-fake-link, .fake-hover {
   cursor: default; }
@@ -428,9 +410,8 @@ h4 {
   text-decoration: none;
   padding-left: 8px;
   padding-right: 8px; }
-
-.main a:hover, .brand-fake-link:hover {
-  color: #2b2b2b; }
+  .main a:hover, .brand-fake-link:hover {
+    color: #2b2b2b; }
 
 body {
   padding: 0;
@@ -457,16 +438,14 @@ body {
   position: absolute;
   bottom: 4.5vw;
   right: 6vw; }
-
-.footer svg {
-  opacity: 0.2;
-  width: 44px;
-  height: 44px; }
-
-@media (min-width: 1200px) {
   .footer svg {
-    height: 3vw;
-    width: 3vw; } }
+    opacity: 0.2;
+    width: 44px;
+    height: 44px; }
+  @media (min-width: 1200px) {
+    .footer svg {
+      height: 3vw;
+      width: 3vw; } }
 
 body .brands {
   height: 0;
@@ -477,36 +456,35 @@ body .brands {
 
 body .non-brands {
   height: auto;
-  padding: 3vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
   max-height: calc(100vh - 12vw); }
-
-body .non-brands ul {
-  transition: opacity 1s ease-out;
-  opacity: 1; }
+  body .non-brands ul {
+    transition: opacity 1s ease-out;
+    opacity: 1; }
+  @media (min-width: 768px) {
+    body .non-brands {
+      padding: 3vw; } }
 
 body.branded {
   background-color: #ccfb8c; }
-
-body.branded .brands {
-  height: calc(100vh - 12vw);
-  opacity: 1; }
-
-body.branded .non-brands {
-  padding: 0;
-  height: 0;
-  overflow: hidden; }
-
-body.branded .non-brands ul {
-  opacity: 0; }
+  body.branded .brands {
+    height: calc(100vh - 12vw);
+    opacity: 1; }
+  body.branded .non-brands {
+    padding: 0;
+    height: 0;
+    overflow: hidden; }
+    body.branded .non-brands ul {
+      opacity: 0; }
 
 .iterable {
   margin: 0;
-  padding-left: 4px;
+  padding-left: 12px;
   position: relative; }
-
-@media (min-width: 768px) {
-  .iterable {
-    padding-left: 16px; } }
+  @media (min-width: 768px) {
+    .iterable {
+      padding-left: 16px; } }
 
 .iterates {
   list-style-type: none;
@@ -609,10 +587,9 @@ h4 {
   height: 0;
   color: #111111;
   animation: believe 30600ms ease-in infinite; }
-
-.iterate-belief .i-believe {
-  visiblibilty: hidden;
-  opacity: 0; }
+  .iterate-belief .i-believe {
+    visiblibilty: hidden;
+    opacity: 0; }
 
 .iterate-belief:nth-of-type(2) {
   animation-delay: 3400ms; }
@@ -656,17 +633,14 @@ h4 {
   animation: dotdot 3s infinite;
   padding-left: 4px;
   padding-right: 4px; }
-
-.period.first {
-  opacity: 1; }
-
-.period.second {
-  opacity: 0;
-  animation-delay: 1s; }
-
-.period.third {
-  opacity: 0;
-  animation-delay: 2s; }
+  .period.first {
+    opacity: 1; }
+  .period.second {
+    opacity: 0;
+    animation-delay: 1s; }
+  .period.third {
+    opacity: 0;
+    animation-delay: 2s; }
 
 .blurred .main {
   filter: blur(3px); }
@@ -678,52 +652,47 @@ h4 {
   right: 0;
   bottom: 0;
   font-family: "Courier", monospace; }
-
-#terminal .green {
-  color: #66af39; }
-
-#terminal .blue {
-  color: #a0b3e8; }
-
-#terminal .orange {
-  color: #d87a37; }
-
-#terminal .yellow {
-  color: #e8c347; }
-
-#terminal .blink {
-  position: relative;
-  display: inline-block;
-  animation: blink 1s 3; }
-
-#terminal .terminal-foreground {
-  color: #fff;
-  position: relative;
-  padding-left: 20px;
-  padding-top: 20px;
-  z-index: 4; }
-
-#terminal .terminal-background {
-  background-color: #1d1233;
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.8; }
-
-#terminal .resp-holder {
-  display: inline-block; }
-
-#terminal .resp-1 {
-  white-space: nowrap;
-  display: inline-block;
-  top: 4px;
-  position: relative;
-  overflow: hidden;
-  width: 28px;
-  animation: type 500ms steps(3, end); }
+  #terminal .green {
+    color: #66af39; }
+  #terminal .blue {
+    color: #a0b3e8; }
+  #terminal .orange {
+    color: #d87a37; }
+  #terminal .yellow {
+    color: #e8c347; }
+  #terminal .blink {
+    position: relative;
+    display: inline-block;
+    animation: blink 1s 3; }
+  #terminal .terminal-foreground {
+    color: #fff;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 20px;
+    z-index: 4; }
+  #terminal .terminal-background {
+    background-color: #1d1233;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8; }
+  #terminal .resp-holder {
+    display: inline-block; }
+  #terminal .resp-1 {
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    width: 28px;
+    animation: type 500ms steps(3, end); }
+    @media (min-width: 768px) {
+      #terminal .resp-1 {
+        top: 4px; } }
+  #terminal p span {
+    display: inline-block; }
 
 .delay-1 {
   opacity: 1;
@@ -753,34 +722,29 @@ h4 {
 .brands {
   display: flex;
   width: 100%; }
-
-.brands ul {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center; }
-
-.brands li {
-  padding: 0;
-  width: 0;
-  list-style-type: none;
-  width: 33.33333%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0; }
-
-.brands li img {
-  max-width: 80%;
-  display: block; }
-
-.brands li.mtv img {
-  max-width: 50%; }
-
-.brands li.ipage img {
-  max-width: 50%; }
+  .brands ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+  .brands li {
+    padding: 0;
+    width: 0;
+    list-style-type: none;
+    width: 33.33333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; }
+    .brands li img {
+      max-width: 80%;
+      display: block; }
+    .brands li.mtv img {
+      max-width: 50%; }
+    .brands li.ipage img {
+      max-width: 50%; }
 
 @media (min-width: 768px) {
   .brands li {
@@ -795,5 +759,3 @@ h4 {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0; }
-
-/*# sourceMappingURL=styles.css.map */

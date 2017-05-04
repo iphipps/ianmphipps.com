@@ -3,7 +3,7 @@ $time-to-read: 2200ms;
 $time-to-beliefs: 3400ms;
 .iterable {
 	margin: 0;
-	padding-left: 4px;
+	padding-left: 12px;
 	position: relative;
 	@include breakpoint($desktop) {
 		padding-left: 16px;

@@ -55,11 +55,15 @@ body {
 	}
 	.non-brands {
 		height: auto;
-		padding: $border;
+		padding-top: $border;
+		padding-bottom: $border;
 		max-height: calc(100vh - #{(4*$border)});
 		ul {
 			transition: opacity 1s ease-out;
 			opacity: 1;
+		}
+		@include breakpoint($desktop) {
+			padding: $border;
 		}
 		
 	}

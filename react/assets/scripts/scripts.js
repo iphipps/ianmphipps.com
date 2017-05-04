@@ -30,7 +30,7 @@ var ian = function() {
 		document.body.appendChild(div);
 		body.className += " blurred";
 		var move = function() {
-			return window.location = 'https://github.com/iphipps';
+			// return window.location = 'https://github.com/iphipps';
 		}
 		div.addEventListener('click', move);
 		var holder1 = document.querySelector('.holder1');
