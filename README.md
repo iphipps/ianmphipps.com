@@ -1,8 +1,11 @@
 IanMPhipps.com
 =========
 
-####Directories and link mapping
-###### /angular
+##Directories and link mapping
+### /static-react
+This is the most recent iteration of my portfolio site.  Feel free to look around in here or in the other directories. 
+
+### /angular
 
 The /app directory is the uncompressed, unminified version of my portfolio site.  You can find it at <http://angular.ianmphipps.com/>
 
