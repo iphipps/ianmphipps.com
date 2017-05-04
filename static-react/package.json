@@ -1,0 +1,47 @@
+{
+  "name": "ianphipps.com",
+  "version": "0.0.5",
+  "description": "A portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --progress --colors",
+    "prod": "webpack -p --progress --colors",
+    "build": "npm run webpack && npm run compile-sass",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "npm run dev",
+    "compile-sass": "node-sass --include-path scss assets/styles/styles.scss assets/styles/styles.css",
+    "watch-sass": "node-sass --watch --source-map true assets/styles/ --output assets/styles/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iphipps/ianmphipps.com.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Ian Phipps",
+  "private": true,
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iphipps/ianmphipps.com/issues"
+  },
+  "homepage": "https://github.com/iphipps/ianmphipps.com#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "jsx-loader": "^0.13.2",
+    "node-libs-browser": "^2.0.0",
+    "node-sass": "^4.5.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-svg-loader": "^1.1.1",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}

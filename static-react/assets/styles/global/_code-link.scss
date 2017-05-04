@@ -1,0 +1,98 @@
+$green: #66af39;
+$blue: #a0b3e8;
+$orange: #d87a37;
+$yellow: #e8c347;
+.blurred .main {
+	filter: blur(3px);
+}
+#terminal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-family: "Courier", monospace;
+	.green {
+		color: $green;
+	}
+	.blue {
+		color: $blue;
+	}
+	.orange {
+		color: $orange;
+	}
+	.yellow {
+		color: $yellow;
+	}
+	.blink {
+		position: relative;
+		display: inline-block;
+		animation: blink 1s 3;
+	}
+	.terminal-foreground {
+		color: #fff;
+		position: relative;
+		padding-left: 20px;
+		padding-top: 20px;
+		z-index: 4;
+	}
+	.terminal-background {
+		background-color: #1d1233;
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0.8;
+	}
+	.resp-holder {
+		display: inline-block;
+	}
+	.resp-1 {
+		white-space: nowrap;
+		display: inline-block; 
+		position: relative;
+  		overflow: hidden;
+		width: 28px;
+  		animation: type 500ms steps(3, end); 
+  		//animation-delay: 2s;
+  		@include breakpoint($desktop) {
+  			top: 4px;
+  		}
+	}
+	p {
+		span {
+			display: inline-block;
+		}
+	}
+}
+.delay-1 {
+	opacity: 1;
+	display: inline-block;
+	animation: fadein 1000ms;
+	padding-top: 4px;
+	padding-right: 4px;
+	//animation-delay: 1s;
+}
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+	70% {
+		opacity: 0;
+	}
+	71% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes blink { 
+	to{opacity: .0}
+}
+@keyframes type{ 
+	
+  from { width: 0; } 
+} 

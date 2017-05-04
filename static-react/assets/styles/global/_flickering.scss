@@ -1,0 +1,121 @@
+$length-of-technologies: 21;
+$time-to-read: 2200ms;
+$time-to-beliefs: 3400ms;
+.iterable {
+	margin: 0;
+	padding-left: 12px;
+	position: relative;
+	@include breakpoint($desktop) {
+		padding-left: 16px;
+	}
+
+}
+.iterates {
+	list-style-type: none;
+	opacity: 0;
+	animation: move ($length-of-technologies * $time-to-read) ease-in infinite;
+	position: absolute;
+	color: $black;
+}
+
+@for $i from 1 through $length-of-technologies{
+	.iterates:nth-of-type(#{$i + 1}){
+		
+		animation-delay: #{$i * $time-to-read};
+
+	}
+
+}
+@keyframes move {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  #{(100% / $length-of-technologies) / 2} {
+   	display: inline-block;
+   	opacity: 1;
+  }
+
+  #{(100% / $length-of-technologies)} {
+    display: none;
+    opacity: 0;
+  }
+}
+$length-of-beliefs: 9;
+h4 {
+	position: relative;
+	min-height: 150px;
+
+}
+.stagnate {
+	position: absolute;
+	top: 0;
+	display: block;
+}
+.iterable-beliefs {
+	position: absolute;
+	height: 150px;
+}
+.iterate-belief {
+	.i-believe {
+		visiblibilty: hidden;
+		opacity: 0;
+	}
+	list-style-type: none;
+	display: block;
+	opacity: 0;
+	height: 0;
+
+	color: $black;
+	animation: believe ($length-of-beliefs * $time-to-beliefs) ease-in infinite;
+
+}
+
+@for $i from 1 through $length-of-beliefs{
+	.iterate-belief:nth-of-type(#{$i + 1}){
+		
+		animation-delay: #{$i * $time-to-beliefs};
+
+	}
+
+}
+
+
+
+@keyframes believe {
+  0% {
+    height: 0;
+
+    opacity: 0;
+  }
+  #{(100% / $length-of-beliefs) / 2} {
+   	height: auto;
+
+   	opacity: 1;
+  }
+
+  #{100% / $length-of-beliefs} {
+    height: 0;
+
+    opacity: 0;
+  }
+}
+.period {
+	$base: 3s;
+	animation: dotdot $base infinite;
+	padding-left: 4px;
+	padding-right: 4px;
+	&.first {
+		opacity: 1;
+		
+	}
+	&.second {
+		opacity: 0;
+		animation-delay: ($base / 3);
+	}
+	&.third {
+		opacity: 0;
+		animation-delay: ($base / 3 * 2);
+	}	
+}
+
